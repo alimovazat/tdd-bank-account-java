@@ -10,6 +10,7 @@ public class AccountTest {
     @Test
 	@Disabled
     public void depositAnAmountToIncreaseTheBalance() {
-        assertThat("your first test").isBlank();
+        Account account = new Account();
+        assertThat(account.balance()).isEqualTo(0);
     }
 }
