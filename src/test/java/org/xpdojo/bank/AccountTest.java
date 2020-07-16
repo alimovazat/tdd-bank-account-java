@@ -9,8 +9,16 @@ public class AccountTest {
 
     @Test
 	@Disabled
-    public void depositAnAmountToIncreaseTheBalance() {
+    public void CheckTheBalance() {
         Account account = new Account();
         assertThat(account.balance()).isEqualTo(0);
+    }
+
+    @Test
+    public void depositAnAmountToIncreaseTheBalance() {
+        Account account = new Account();
+        int amount;
+        account.deposit(10 );
+        assertThat(account.balance()).isEqualTo(10);
     }
 }
